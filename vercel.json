@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "functions": {
+    "mines-*.js": {
+      "maxDuration": 30
+    },
+    "game-logic.js": {
+      "maxDuration": 30
+    },
+    "manifest.js": {
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/mines/user",
+      "dest": "/mines-user.js"
+    },
+    {
+      "src": "/mines/settings",
+      "dest": "/mines-settings.js"
+    },
+    {
+      "src": "/mines/sessions",
+      "dest": "/mines-sessions.js"
+    },
+    {
+      "src": "/mines/session",
+      "dest": "/mines-session.js"
+    },
+    {
+      "src": "/mines/round",
+      "dest": "/mines-round.js"
+    },
+    {
+      "src": "/mines/session/(.*)",
+      "dest": "/mines-session-id.js"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.js"
+    },
+    {
+      "src": "/mines/(.*)",
+      "dest": "/mines/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}

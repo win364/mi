@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CAVEMINES — Wrapper</title>
+    <style>
+        /* Layout: top bar, left sidebar, game content */
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: #0b1220;
+            color: #e7edf6;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Segoe UI Emoji";
+        }
+        .topbar {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            background: #0f172a;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .topbar .brand { font-weight: 700; margin-right: 24px; }
+        .topbar .menu { display: flex; gap: 16px; opacity: 0.9; }
+        .topbar .spacer { flex: 1; }
+        .chip { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:10px; font-size:12px; background:#18233a; color:#e7edf6; }
+        .chip.yellow { background: linear-gradient(103deg,#ffd54a,#ffb300); color:#111; font-weight:600; }
+        .chip.gray { background:#18233a; }
+        .btn { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#122038; color:#e7edf6; cursor:default; }
+        .btn.green { background:#16a34a; border-color:#16a34a; color:#04120a; font-weight:700; }
+        .circle { width:36px; height:36px; border-radius:50%; background:#18233a; display:inline-flex; align-items:center; justify-content:center; }
+
+        .page {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            grid-template-rows: calc(100vh - 56px);
+        }
+
+        .sidebar {
+            background: #0f172a;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            padding: 16px;
+            overflow: auto;
+        }
+        .sidebar h3 { font-size: 14px; font-weight: 700; margin: 16px 0 8px; opacity: 0.8; }
+        .sidebar .item { padding: 10px 8px; border-radius: 8px; cursor: default; color: #d7e0ee; }
+        .sidebar .item:hover { background: rgba(255,255,255,0.06); }
+
+        .content { position: relative; }
+        .game-frame {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #0b1220;
+        }
+    </style>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+    <div class="topbar">
+        <div class="brand">1win</div>
+        <div class="chip yellow">Free Money!</div>
+        <nav class="menu">
+            <span>Главная</span>
+            <span>Спорт</span>
+            <span>Казино</span>
+            <span>Live-games</span>
+            <span>LuckyJet</span>
+            <span>Speed&Cash</span>
+            <span>Aviator</span>
+            <span>JetX</span>
+            <span>Быстрые игры</span>
+            <span>Трейдинг</span>
+            <span>Poker</span>
+            <span>Ещё</span>
+        </nav>
+        <div class="spacer"></div>
+        <div class="chip gray">UZS ▾</div>
+        <div class="btn" title="Баланс">214,31</div>
+        <div class="btn green">Пополнить</div>
+        <div class="circle" title="Профиль">●</div>
+        <div class="circle" title="Меню">⋮</div>
+        <div class="circle" title="Уведомления">🔔</div>
+    </div>
+
+    <div class="page">
+        <aside class="sidebar">
+            <div style="background: linear-gradient(135deg, #16a34a, #22c55e); color:#05130a; padding:12px 14px; border-radius:12px;">
+                Freespins — Вам доступно 100 фриспинов
+            </div>
+            <h3>Категории</h3>
+            <div class="item">Нагретые</div>
+            <div class="item">Популярные</div>
+            <div class="item">1win Games</div>
+            <div class="item">Drops & Wins</div>
+            <div class="item">Новые</div>
+            <div class="item">Только на 1win</div>
+            <div class="item">Лайв Казино</div>
+            <div class="item">Быстрые игры</div>
+            <div class="item">Все игры</div>
+            <div class="item">Слоты</div>
+            <div class="item">Фруктовые 30M сум</div>
+            <div class="item">Spinoleague</div>
+            <div class="item">Kalamba Kash Drops</div>
+        </aside>
+        <main class="content">
+            <!-- Embed the actual game build -->
+            <iframe class="game-frame" src="/mines/index.html" title="CAVEMINES"></iframe>
+        </main>
+    </div>
+</body>
+</html>

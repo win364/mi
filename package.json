@@ -1,0 +1,23 @@
+{
+  "name": "mines-game-vercel",
+  "version": "1.0.0",
+  "description": "Mines game deployed on Vercel",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "echo 'Serverless functions will handle requests'"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["mines", "game", "vercel", "serverless"],
+  "author": "Your Name",
+  "license": "MIT"
+}
